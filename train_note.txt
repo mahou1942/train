@@ -1,0 +1,133 @@
+GIT
+https://backlog.com/git-tutorial/tw/intro/intro1_1.html
+
+https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md
+
+second stage
+
+//信用個人測試機
+個人測試機：
+
+本機 host 請綁到對應的IP
+範例：
+192.168.2.121 admin121(依照自己的IP).sb321.net    ctl121.sb321.net    ag121.sb321.ne    tw121.sb321.net
+
+
+登入主機後，需要進行增加使用者
+新增一個自己喜歡的使用者(自己使用)
+
+vhost設定與開創資料夾 設定到對應的 host
+VHOST設定：設定檔位置 /usr/local/web/nginx/conf/vhost/small-ball/sb321.net.conf
+
+*本機要可以使用設定的網址開啟頁面
+
+
+重新啟動nginx (或是啟動)
+
+相關資料：
+啟動nginx
+/usr/local/web/nginx/sbin/nginx
+
+重新啟動nginx
+/usr/local/web/nginx/sbin/nginx -s reload
+
+測試機的root 密碼都改為 qwe!123 了
+
+
+補充 Git Flow 觀念
+上程式流程
+
+
+==================================
+GIT位置：
+credit
+帳號@192.168.2.135:/home/git/trunk.git
+帳號@192.168.2.135:/home/git/filerepo.git
+帳號@192.168.2.135:/home/git/docker.git
+#信用系統測試機 sb321
+192.168.2.135    mphpadmin.orz
+192.168.2.135    admin.sb321.net
+192.168.2.135    ctl.sb321.net
+192.168.2.135    ag.sb321.net
+192.168.2.135    sb321.net
+192.168.2.135    tools.sb321.net
+
+
+
+==================================
+1.進行基本能力 測試 和 訓練
+        2.協助了解 信用系統運行方式
+            a.管理介面
+            b.體系建制 公司10 大股東30 股東30 總代理20 代理10
+        3.六合遊戲
+            a.運行流程 (開期下單) 
+                *額度發放  
+                *代理開局 
+                *操盤介面
+            b.背景程式運作方式  
+                *補充 memcache
+                *補充 shellscript
+            c.賠率計算 報表計算 初始參數 除始賠率了解
+            d.結算
+        4.七星遊戲
+            a.運行流程
+            b.背景程式運作方式
+            c.報表計算
+            d.結算
+            
+        5.D3福彩\PL體彩遊戲
+            a.運行流程
+            b.背景程式運作方式
+            c.報表計算
+            d.結算
+            
+        6.高頻彩系列遊戲        
+            a.運行流程
+            b.背景程式運作方式
+            c.報表計算
+            d.結算
+            
+            
+            各遊戲都將協助了解以下項目
+            a.運行流程
+            b.背景程式運作方式
+            c.資料庫
+            d.賠率計算 報表計算
+            e.結算
+
+
+小六
+1.我們有用 memcache
+/home/sb1/ctl/app/sb_ioratio.php
+從資料庫讀取賠率資料寫入 memcache
+這隻比較單存
+2.查小六的信用額度 資料庫欄位在哪裡？
+3.有空可以多看看資料庫  其他遊戲的部分先不看看小六就可以了! 一種遊戲懂了! 其他遊戲都差不多的架構
+UserAccount.UserData
+去了解每個欄位的意義
+可以利用程式搜尋
+查到欄位的用法
+
+
+4.http://www.puritys.me/docs-blog/article-304-Mysql-Replication-%E8%A8%AD%E5%AE%9A.html //Mysql Replication 設定
+我們存取資料有分
+Master Slave
+M是可以寫入讀取  S 只能讀取
+M沒必要不要讀取  在做關鍵判斷才要用
+查報表 不是很即時的要用S
+檢查額度是否下超過這種 是要用M
+明天公司站成設定   成數跟額度一樣! 一層一層放!
+公司10
+大股東30
+股東30
+總代理20
+代理10
+
+明天公司站成設定   成數跟額度一樣! 一層一層放!
+公司10
+大股東30
+股東30
+總代理20
+代理10
+
+設定完後可以去下單看! 報表的計算

@@ -1,0 +1,162 @@
+body{
+	background-color:rgba(200,200,200,1);			/*背景顏色*/
+	font-size:18pt;									/*字體大小*/
+	font-family:'新細明體' , 'MS Outlook';			/*字型 有前後順序*/
+}
+
+.page{
+	width:70%;									/*寬度 可用px,%*/
+	border : 2px solid purple;						/*框線*/
+	margin-left :auto;								/*左邊界*/
+	margin-right:auto;								/*右邊界*/
+	padding : 0 ;									/*對內框*/
+	box-shadow : 0px 0px 10px 10px gray ; 			/*邊邊陰影*/
+	overflow: auto;									/*顯示是否浮出*/
+	background-color:white;
+	min-height:500px;
+	position: relative;
+
+}
+
+header{
+	width:98%;
+	margin : 0 auto 0 auto;
+	border : 0px solid blue;
+	padding : 0;
+	min-height:120px;									/*此框(header)寬度*/
+	background-image: url('../images/header01.jpg');	/*背景為圖片*/
+	border-radius : 60px;								/*圓角*/
+}
+form{
+	margin:opx;
+	display:inline;
+}
+nav{
+	margin : 0 auto 0 auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	width: 98%;
+	border : 0px solid gray;
+}
+
+nav > ul{
+	margin : 0 auto 0 auto;
+	padding :0;
+	list-style-type:none;
+	position:relative;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin : 0 auto 0 auto;
+}
+
+nav > ul > li{
+	display:inline-block;								/*設定行度*/
+	width:19%;
+	text-align:center;									/*水平對齊*/
+	border-top:1px solid blue;							/*上方框線*/
+	border-left:1px solid blue;							/*左方框線*/
+	border-right:1px solid blue;						/*右方框線*/
+	border-bottom:1px solid blue;						/*下方框線*/
+	background-color:#9F88FF;							/*底色*/
+	transition:background-color 1s;						/*顏色變化(1)*/
+	-webkit-transition:background-color 1s;				/*顏色變化(2)*/
+	-moz-transition:background-color 1s;
+	margin : 0 auto 0 auto;
+}
+
+nav > ul > li:hover{											/*移動後的顏色變化*/
+	border-top:2px solid black;
+	border-left:2px solid black;
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+	background-color:#99FF99;
+}
+
+nav > ul > li > ul{
+	visibility:hidden;									/*透明效果:關*/
+	position:absolute;
+	width:185px;
+	border: 1px solid black;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	background-color:violet;
+	text-align:center;
+	opacity:0;
+	transition:opacity 1s;
+	-webkit-transition:opacity 1s;
+	-moz-transition:opacity 1s;
+	}
+
+nav > ul > li:hover > ul {
+	visibility:visible;									/*透明效果:開*/
+	opacity:1;
+	}
+
+nav > ul > li > ul > li{
+	display:block;
+	border:none;
+	font-size:14px;
+	text-align:left;
+}
+
+nav a{
+	display:block;										/*填滿*/
+	text-decoration:none;								/*消除底線*/
+	color:darkblue;										/*a相關的顏色變黑*/
+}
+
+nav a:hover{
+	text-shadow: 1px 1px 1px gray;						/*文字陰影*/
+	box-shadow: 1px 5px 3px 1px black;
+}
+nav > ul > li:hover > ul  > li{
+	visibility:visible;									/*透明效果:開*/
+	higher: 40px;
+	}
+
+.content{
+	width:95%;
+	border : 1px solid blue;
+	float : none;
+	margin-bottom:30px;
+	padding: 10px;
+	background-color: rgba(200,200,200,0.05);
+}
+
+.content:hover {
+	border: 1px solid black;
+	box-shadow: 1px 1px 1px 1px gray;
+}
+
+.content a{
+	text-decoration: none;
+
+	transition:background-color 0.1s;
+	-webkit-transition:background-color 1s;
+}
+
+.content h1.mytitle{
+	width:102%;
+	border: 1px solid blue;
+	margin-left:-10px;
+	margin-top:-10px;
+	margin-bottom:-1px;
+	padding-right: 0px;
+	background-color: #FFA488;
+
+	color:black;
+}
+
+
+
+footer{
+	width:98%;
+	color:gray;
+	font-size:10px;
+	text-align :center;
+	/*float:left;*/
+	padding: 3px 0 5px 0;
+	bottom:0;
+	position:absolute;
+}

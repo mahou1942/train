@@ -1,0 +1,40 @@
+
+管理後端(業務table 給予店家table)
+
+->可登入(業務)
+->可進行帳號供給
+->只可管理自己所供給的帳號 並觀看回復和刪除回復
+->有個銷售頁面表 可以看產品的銷售數量 並有列表轉換獎金
+
+
+店家後端(店家table 產品品項table 觀看訂購者table->掛勾通訊錄table)
+
+->可登入(業務所提供的帳號)
+->可設定店家名稱(與店家帳號串連並修改)
+->店家產品可設定售價與增查改刪
+->可觀看銷售頁面表 可以看到銷售數量 和訂購者
+
+使用者後端(通訊錄table)
+
+->可觀看店家名稱
+->可訂購產品
+
+
+
+業務人員
+id account passowrd 
+
+店家
+id account password 被分配到的業務人員sales_account(外來鍵) 店名 Enable
+
+遭刪除記錄
+id 店家_account 店家_password sales_account 店家_店名 店家_enable
+
+產品品項 (增查改刪)
+id name money 店家_account
+
+通訊綠
+id name namekey(主鍵) ..... 
+
+訂購
+id 訂購產品_name 店家_name  訂購者_account  訂購數量 訂購時間

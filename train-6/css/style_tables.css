@@ -1,0 +1,26 @@
+table.boomer{
+	border: 1px solid gray;
+	margin:5px 5px 5px 10px;
+	color:blue;
+	border-collapse: collapse;
+	font-size: 26px;
+	width: 80%;
+}
+table.boomer td , table.boomer th{
+	border: 1px solid gray;
+}
+
+table.symbo{
+	border-collapse: collapse;
+}
+table.symbo td {
+	border-bottom: 1px dotted gray;
+}
+
+table.symbo  tr.two {
+	background-color: peru;
+}
+
+table.symbo  tr.one {
+	background-color: darkturquoise;
+}
